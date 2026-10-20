@@ -1,0 +1,5 @@
+Contact: tel:+918041262785
+Contact: mailto:saeedkm@gmail.com
+Expires: 2027-10-20T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://farico.in/.well-known/security.txt
