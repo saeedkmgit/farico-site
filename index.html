@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://behold.pictures https://*.cdninstagram.com https://*.fbcdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src https://feeds.behold.so; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data: https://behold.pictures https://*.behold.pictures https://*.cdninstagram.com https://*.fbcdn.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src https://feeds.behold.so; object-src 'none'; base-uri 'self'; form-action 'none'; upgrade-insecure-requests">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Complete Clothing Store in Marathahalli | Farico</title>
@@ -157,14 +157,16 @@ footer a{text-decoration:none}
 .ig-head a{font-size:15px;font-weight:400;text-decoration:underline;text-underline-offset:5px}
 .ig-wrap{position:relative;display:none}
 .insta.ready .ig-wrap{display:block}
-.ig-track{display:grid;grid-auto-flow:column;grid-auto-columns:72%;gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.ig-track{display:grid;grid-auto-flow:column;grid-auto-columns:46%;gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .ig-track::-webkit-scrollbar{display:none}
-.ig-item{aspect-ratio:1/1;scroll-snap-align:start;display:block}
+.ig-item{aspect-ratio:9/16;scroll-snap-align:start;display:block}
+.ig-cap{position:absolute;left:0;right:0;bottom:0;padding:28px 12px 12px;font-size:13px;line-height:1.35;color:#fff;background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,0))}
 .ig-play{position:absolute;top:10px;right:10px;width:0;height:0;border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;filter:drop-shadow(0 1px 4px rgba(0,0,0,.5))}
 .ig-nav{display:none}
 @media (min-width:640px){.ig-track{grid-auto-columns:calc((100% - 2*var(--gap))/3)}}
 @media (min-width:960px){
  .ig-track{grid-auto-columns:calc((100% - 3*var(--gap))/4)}
+ .ig-cap{font-size:14px;padding:36px 16px 16px}
  .ig-nav{display:flex;align-items:center;justify-content:center;position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border:0;border-radius:50%;background:rgba(251,250,247,.92);color:#141210;cursor:pointer;font-size:20px;box-shadow:0 2px 12px rgba(0,0,0,.18)}
  .ig-nav[data-dir="prev"]{left:12px}.ig-nav[data-dir="next"]{right:12px}
 }
