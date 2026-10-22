@@ -170,6 +170,9 @@ footer a{text-decoration:none}
  .ig-nav{display:flex;align-items:center;justify-content:center;position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border:0;border-radius:50%;background:rgba(251,250,247,.92);color:#141210;cursor:pointer;font-size:20px;box-shadow:0 2px 12px rgba(0,0,0,.18)}
  .ig-nav[data-dir="prev"]{left:12px}.ig-nav[data-dir="next"]{right:12px}
 }
+.insta{grid-column:1/-1;min-width:0}
+@media (max-width:959px){.grid>*,.grid .row>*,.grid .stack>*{order:2}.grid #sarees{order:0}.grid .insta{order:1}}
+@media (hover:hover){.insta .tile img,.insta .tile:hover img{filter:none}}
 </style>
 </head>
 <body>
@@ -235,6 +238,14 @@ footer a{text-decoration:none}
    <div class="cap"><span class="num">03</span><h3>Kurtis &amp; Women's Wear</h3><p>Straight, A-line, Anarkali and Indo-western.</p></div>
   </article>
   </div></div>
+  <section class="insta" id="insta" aria-labelledby="igh">
+  <div class="ig-head"><h2 id="igh">New on the shelves</h2><a href="https://www.instagram.com/farico.in/" target="_blank" rel="noopener">Follow @farico.in ↗</a></div>
+  <div class="ig-wrap">
+   <div class="ig-track"></div>
+   <button class="ig-nav" data-dir="prev" type="button" aria-label="Previous posts">←</button>
+   <button class="ig-nav" data-dir="next" type="button" aria-label="Next posts">→</button>
+  </div>
+ </section>
   <div class="row r2">
   <article class="tile g4" id="dupattas">
    <img src="img/dupattas-640.webp" srcset="img/dupattas-640.webp 640w, img/dupattas-1000.webp 1000w" sizes="(min-width:960px) 26vw, 50vw" width="1000" height="1500" loading="lazy" decoding="async" alt="Woman wearing a grey outfit with a black embroidered dupatta" style="object-position:50% 30%">
@@ -275,14 +286,6 @@ footer a{text-decoration:none}
   </div>
  </section>
 
- <section class="insta" id="insta" aria-labelledby="igh">
-  <div class="ig-head"><h2 id="igh">New on the shelves</h2><a href="https://www.instagram.com/farico.in/" target="_blank" rel="noopener">Follow @farico.in ↗</a></div>
-  <div class="ig-wrap">
-   <div class="ig-track"></div>
-   <button class="ig-nav" data-dir="prev" type="button" aria-label="Previous posts">←</button>
-   <button class="ig-nav" data-dir="next" type="button" aria-label="Next posts">→</button>
-  </div>
- </section>
 
  <section class="tile visit" id="visit" aria-labelledby="vh">
   <img src="img/visit-960.webp" srcset="img/visit-960.webp 960w, img/visit-2000.webp 2000w" sizes="(min-width:960px) 80vw, 100vw" width="2000" height="900" loading="lazy" decoding="async" alt="Close-up of red silk with gold zari embroidery">
