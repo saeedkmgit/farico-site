@@ -77,6 +77,7 @@ img{display:block;max-width:100%}
 .grid .tile{aspect-ratio:3/4}
 .grid .wide{grid-column:1/-1;aspect-ratio:4/5}
 .grid .land{aspect-ratio:3/4}
+.grid .row,.grid .stack{display:contents}
 
 /* Visit */
 .visit{margin-top:var(--gap);min-height:520px}
@@ -124,22 +125,24 @@ footer a{text-decoration:none}
  .hero .body>div{display:flex;flex-direction:column;gap:18px;max-width:640px}
  .hero p{font-size:17px}
  .hero .btn{align-self:auto;min-height:52px;padding:0 26px}
- .grid{grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:10px}
- .grid .tile,.grid .wide{aspect-ratio:auto}
+ .grid{display:flex;flex-direction:column}
+ .grid .row{display:grid;gap:var(--gap)}
+ .grid .row .tile{grid-column:auto}
+ .grid .r1{grid-template-columns:2fr 1fr}
+ .grid .stack{display:flex;flex-direction:column;gap:var(--gap)}
+ .grid .r1 .g1{aspect-ratio:auto;height:100%}
+ .grid .g2{aspect-ratio:3/4}
+ .grid .g3{aspect-ratio:4/5}
+ .grid .g1 h2{font-size:46px}
+ .grid .r2{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .grid .r2 .tile{aspect-ratio:2/3}
+ .grid .r3{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .grid .r3 .tile{aspect-ratio:4/5}
+ .grid .r4{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .grid .r4 .tile{aspect-ratio:4/5}
  .cap{padding:22px 24px}
  .cap h3{font-size:28px}
- .grid .g1{grid-column:1/span 7;grid-row:1/span 44}
  .grid .g1 h2{font-size:46px}
- .grid .g2{grid-column:8/span 5;grid-row:1/span 26}
- .grid .g3{grid-column:8/span 5;grid-row:27/span 18}
- .grid .g4{grid-column:1/span 4;grid-row:45/span 22}
- .grid .g5{grid-column:5/span 4;grid-row:45/span 22}
- .grid .g6{grid-column:9/span 4;grid-row:45/span 22}
- .grid .g7{grid-column:1/span 6;grid-row:67/span 24}
- .grid .g8{grid-column:7/span 6;grid-row:67/span 24}
- .grid .g9{grid-column:1/span 4;grid-row:91/span 20}
- .grid .g10{grid-column:5/span 4;grid-row:91/span 20}
- .grid .g11{grid-column:9/span 4;grid-row:91/span 20}
  .g7 h3,.g8 h3{font-size:32px}
  .visit{min-height:440px}
  .visit .shade{background:linear-gradient(to right,rgba(0,0,0,.75),rgba(0,0,0,.45) 55%,rgba(0,0,0,.15))}
@@ -196,18 +199,22 @@ footer a{text-decoration:none}
  </section>
 
  <section class="grid" aria-label="Collections">
+  <div class="row r1">
   <article class="tile wide g1" id="sarees">
    <img src="img/sarees-640.webp" srcset="img/sarees-640.webp 640w, img/sarees-1100.webp 1100w" sizes="(min-width:960px) 45vw, 100vw" width="1100" height="1650" loading="lazy" decoding="async" alt="Woman in a purple and gold silk saree" style="object-position:50% 20%">
    <div class="cap"><span class="num">01</span><h2>Sarees</h2><p>Kanjeevaram, Banarasi, Paithani, Patola, Mysore silk, Gadwal, Ikat, Chanderi, Tussar and more.</p></div>
   </article>
+  <div class="stack">
   <article class="tile g2" id="salwar">
    <img src="img/salwar-480.webp" srcset="img/salwar-480.webp 480w, img/salwar-768.webp 768w" sizes="(min-width:960px) 32vw, 50vw" width="768" height="1024" loading="lazy" decoding="async" alt="Woman in a teal silk salwar suit with an embroidered pink dupatta">
    <div class="cap"><span class="num">02</span><h3>Salwar Suits</h3><p>Anarkali, sharara, palazzo and churidar sets.</p></div>
   </article>
   <article class="tile g3" id="kurtis">
-   <img src="img/kurtis-640.webp" srcset="img/kurtis-640.webp 640w, img/kurtis-900.webp 900w" sizes="(min-width:960px) 32vw, 50vw" width="900" height="1350" loading="lazy" decoding="async" alt="Woman in a navy floral kurta and pants" style="object-position:50% 20%">
+   <img src="img/kurtis-512.webp" srcset="img/kurtis-512.webp 512w, img/kurtis-819.webp 819w" sizes="(min-width:960px) 30vw, 50vw" width="819" height="1024" loading="lazy" decoding="async" alt="Woman in an indigo block-printed Anarkali kurta with matching dupatta" style="object-position:50% 15%">
    <div class="cap"><span class="num">03</span><h3>Kurtis &amp; Women's Wear</h3><p>Straight, A-line, Anarkali and Indo-western.</p></div>
   </article>
+  </div></div>
+  <div class="row r2">
   <article class="tile g4" id="dupattas">
    <img src="img/dupattas-640.webp" srcset="img/dupattas-640.webp 640w, img/dupattas-1000.webp 1000w" sizes="(min-width:960px) 26vw, 50vw" width="1000" height="1500" loading="lazy" decoding="async" alt="Woman wearing a grey outfit with a black embroidered dupatta" style="object-position:50% 30%">
    <div class="cap"><span class="num">04</span><h3>Dupattas</h3><p>Banarasi, Chanderi, Kota, organza and zari.</p></div>
@@ -220,6 +227,8 @@ footer a{text-decoration:none}
    <img src="img/men-640.webp" srcset="img/men-640.webp 640w, img/men-1000.webp 1000w" sizes="(min-width:960px) 26vw, 50vw" width="1000" height="1500" loading="lazy" decoding="async" alt="Groom in traditional Indian wedding attire" style="object-position:50% 20%">
    <div class="cap"><span class="num">06</span><h3>Men's Wear</h3><p>Shirts to sherwanis. Dhotis and mundus.</p></div>
   </article>
+  </div>
+  <div class="row r3">
   <article class="tile wide g7" id="suiting">
    <img src="img/suiting-640.webp" srcset="img/suiting-640.webp 640w, img/suiting-1000.webp 1000w" sizes="(min-width:960px) 40vw, 100vw" width="1000" height="1251" loading="lazy" decoding="async" alt="Suiting fabrics in checks, stripes and herringbone laid side by side">
    <div class="cap"><span class="num">07</span><h3>Suiting, Shirting &amp; Italian Fabrics</h3><p>Wools, linens, checks and pinstripes. Cut to measure for your tailor.</p></div>
@@ -228,6 +237,8 @@ footer a{text-decoration:none}
    <img src="img/materials-640.webp" srcset="img/materials-640.webp 640w, img/materials-750.webp 750w" sizes="(min-width:960px) 40vw, 100vw" width="750" height="1000" loading="lazy" decoding="async" alt="Maroon floral printed dress material">
    <div class="cap"><span class="num">08</span><h3>Blouse &amp; Dress Materials</h3><p>Unstitched suits, block prints, silks and zari. Our tailors stitch them in-house.</p></div>
   </article>
+  </div>
+  <div class="row r4">
   <article class="tile g9" id="nightwear">
    <img src="img/nightwear-640.webp" srcset="img/nightwear-640.webp 640w, img/nightwear-900.webp 900w" sizes="(min-width:960px) 26vw, 50vw" width="900" height="675" loading="lazy" decoding="async" alt="Woman wearing navy silk pyjamas">
    <div class="cap"><span class="num">09</span><h3>Innerwear &amp; Nightwear</h3><p>Women and men. Everyday to lounge.</p></div>
@@ -240,6 +251,7 @@ footer a{text-decoration:none}
    <img src="img/home-640.webp" srcset="img/home-640.webp 640w, img/home-800.webp 800w" sizes="(min-width:960px) 26vw, 100vw" width="800" height="1200" loading="lazy" decoding="async" alt="A bed made with white linen and pillows">
    <div class="cap"><span class="num">11</span><h3>Home Linen</h3><p>Bedsheets, towels, curtains, cushions and rugs.</p></div>
   </article>
+  </div>
  </section>
 
  <section class="tile visit" id="visit" aria-labelledby="vh">
