@@ -23,157 +23,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"ClothingStore","name":"Farico","url":"https://farico.in/","image":"https://farico.in/img/family-683.webp","logo":"https://farico.in/img/logo.png","foundingDate":"1962","telephone":"+91-80-41262785","address":{"@type":"PostalAddress","streetAddress":"505/2, Marathahalli Main Road, Opp. MGA Hospital","addressLocality":"Marathahalli, Bengaluru","addressRegion":"Karnataka","postalCode":"560037","addressCountry":"IN"},"geo":{"@type":"GeoCoordinates","latitude":12.9572004,"longitude":77.7002602},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"21:00"}],"hasMap":"https://www.google.com/maps/search/?api=1&query=FARICO&query_place_id=ChIJmXKPHPkTrjsRgQhDVaaILQQ"}
 </script>
-<style>
-:root{--ink:rgba(20,18,16,.84);--bg:#FBFAF7;--gap:10px;--serif:'Newsreader',Georgia,'Times New Roman',serif;--sans:'Geist','Helvetica Neue',Arial,sans-serif}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:300 16px/1.5 var(--sans);-webkit-font-smoothing:antialiased}
-a{color:inherit}
-img{display:block;max-width:100%}
-.wrap{max-width:1440px;margin:0 auto;padding:0 12px 24px}
-
-/* Mobile header */
-.side{position:sticky;top:0;z-index:5;background:rgba(251,250,247,.94);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);margin:0 -12px 10px;padding:10px 12px 0;border-bottom:1px solid rgba(20,18,16,.08)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:12px}
-.logo img{width:118px;height:auto}
-.place{display:none}
-.acts{display:flex;gap:8px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;padding:0 14px;border:1px solid rgba(20,18,16,.75);font:400 14px var(--sans);letter-spacing:.02em;text-decoration:none;white-space:nowrap}
-.btn svg{width:16px;height:16px}
-.btn.dark{background:#141210;color:#fff;border-color:#141210}
-.cats{display:flex;gap:18px;overflow-x:auto;padding:12px 0 12px;margin:0 -12px;padding-left:12px;padding-right:12px;scrollbar-width:none;font-size:14px}
-.cats::-webkit-scrollbar{display:none}
-.cats a{text-decoration:none;white-space:nowrap}
-.store{display:none}
-
-/* Tiles */
-.tile{position:relative;overflow:hidden;background:#2A2724;color:#fff;margin:0}
-.tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:filter .7s ease,transform 1.4s cubic-bezier(.2,.7,.2,1)}
-.cap{position:absolute;left:0;right:0;bottom:0;padding:14px;display:flex;flex-direction:column;gap:4px;background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,.3) 60%,rgba(0,0,0,0));text-shadow:0 1px 10px rgba(0,0,0,.35)}
-.num{font-size:11px;letter-spacing:.14em}
-.cap h2,.cap h3{margin:0;font:300 22px/1.05 var(--serif)}
-.cap p{margin:0;font-size:13px;line-height:1.45}
-@media (hover:hover){
- .tile img{filter:grayscale(1) contrast(1.05)}
- .tile:hover img{filter:none;transform:scale(1.03)}
-}
-@media (prefers-reduced-motion:reduce){.tile img{transition:none}}
-
-/* Hero */
-.hero{position:relative;aspect-ratio:10/19;background:#141210}
-.hero .bg{position:absolute;inset:-40px;width:calc(100% + 80px);height:calc(100% + 80px);object-fit:cover;filter:blur(28px) brightness(.5);transform:none}
-@media (hover:hover){.hero .bg{filter:grayscale(1) blur(28px) brightness(.5)}.hero:hover .bg{filter:blur(28px) brightness(.5);transform:none}}
-.hero .fg{position:absolute;top:0;left:0;right:0;bottom:auto;width:100%;height:auto;aspect-ratio:683/1024;-webkit-mask-image:linear-gradient(to bottom,#000 80%,transparent);mask-image:linear-gradient(to bottom,#000 80%,transparent)}
-.hero .shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.8) 0%,rgba(0,0,0,.45) 35%,rgba(0,0,0,0) 60%,rgba(0,0,0,0) 85%,rgba(0,0,0,.35) 100%)}
-.hero .top{position:absolute;top:16px;left:16px;right:16px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.18em;text-transform:uppercase}
-.hero .body{position:absolute;left:0;right:0;bottom:0;padding:22px 16px 24px;display:flex;flex-direction:column;gap:14px;text-shadow:0 1px 16px rgba(0,0,0,.4)}
-.hero h1.kicker{margin:0;font:400 11px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;opacity:.9}
-.hero .lead{margin:0;font:300 clamp(38px,10vw,88px)/.98 var(--serif);letter-spacing:-.025em;max-width:none}
-.hero p{margin:0;font-size:15px;line-height:1.55;max-width:560px}
-.hero .btn{align-self:flex-start;color:#fff;border-color:#fff;background:rgba(0,0,0,.2);text-shadow:none}
-
-/* Grid: mobile 2 cols */
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--gap);margin-top:var(--gap)}
-.grid .tile{aspect-ratio:3/4}
-.grid .wide{grid-column:1/-1;aspect-ratio:4/5}
-.grid .land{aspect-ratio:3/4}
-.grid .row,.grid .stack{display:contents}
-
-/* Visit */
-.visit{margin-top:var(--gap);min-height:520px}
-.visit .shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.8),rgba(0,0,0,.45))}
-.visit .body{position:absolute;inset:0;padding:22px 16px;display:flex;flex-direction:column;justify-content:space-between;gap:20px}
-.visit h2{margin:0;font:300 clamp(30px,7vw,54px)/1.05 var(--serif);letter-spacing:-.02em;max-width:720px}
-.info{display:flex;flex-wrap:wrap;gap:16px 40px;font-size:15px;line-height:1.55}
-.info a{text-decoration:none}
-.lbl{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:2px;opacity:.85}
-.visit .btns{display:flex;flex-wrap:wrap;gap:10px}
-.visit .btn{color:#fff;border-color:#fff}
-.visit .btn.dark{background:#fff;color:#141210;border-color:#fff}
-footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 16px;font-size:12px;padding-top:14px}
-footer a{text-decoration:none}
-
-/* Tablet */
-@media (min-width:640px){
- .cap{padding:18px}
- .cap h2,.cap h3{font-size:26px}
- .hero .body{padding:32px}
- .hero{aspect-ratio:10/16}
-}
-
-/* Desktop: side nav + collage */
-@media (min-width:960px){
- :root{--gap:14px}
- .wrap{display:flex;gap:36px;align-items:flex-start;padding:24px 28px 32px}
- .side{position:sticky;top:24px;flex:0 0 190px;margin:0;padding:0;background:none;backdrop-filter:none;-webkit-backdrop-filter:none;border:0;display:flex;flex-direction:column;gap:26px}
- .bar{flex-direction:column;align-items:flex-start;gap:8px}
- .logo img{width:172px}
- .place{display:block;font:italic 300 15px var(--serif)}
- .acts{display:none}
- .cats{flex-direction:column;gap:10px;overflow:visible;margin:0;padding:0;font-size:15px}
- .cats a:hover,.store a:hover{text-decoration:underline;text-underline-offset:4px}
- .store{display:flex;flex-direction:column;gap:10px;font-size:15px}
- .store a{text-decoration:none}
- main{flex:1;min-width:0}
- .hero{aspect-ratio:auto;height:clamp(600px,calc(100svh - 48px),880px)}
- .hero .fg{top:-2%;bottom:auto;left:auto;right:3%;height:116%;width:auto;-webkit-mask-image:linear-gradient(to right,transparent 0,#000 14%,#000 86%,transparent 100%);mask-image:linear-gradient(to right,transparent 0,#000 14%,#000 86%,transparent 100%)}
- .hero .shade{background:linear-gradient(to right,rgba(0,0,0,.72) 0%,rgba(0,0,0,.45) 40%,rgba(0,0,0,0) 62%),linear-gradient(to top,rgba(0,0,0,.45),rgba(0,0,0,0) 40%)}
- .hero .body{top:0;bottom:0;right:auto;width:min(56%,640px);justify-content:flex-end;align-items:flex-start}
- .hero .lead{font-size:clamp(46px,4.6vw,76px)}
- .hero .top{top:26px;left:44px;right:44px}
- .hero .body{padding:40px 44px;gap:24px}
- .hero .body>div{display:flex;flex-direction:column;gap:18px;max-width:640px}
- .hero p{font-size:17px}
- .hero .btn{align-self:auto;min-height:52px;padding:0 26px}
- .grid{display:flex;flex-direction:column}
- .grid .row{display:grid;gap:var(--gap)}
- .grid .row .tile{grid-column:auto}
- .grid .r1{grid-template-columns:2fr 1fr}
- .grid .stack{display:flex;flex-direction:column;gap:var(--gap)}
- .grid .r1 .g1{aspect-ratio:auto;height:100%}
- .grid .g2{aspect-ratio:3/4}
- .grid .g3{aspect-ratio:4/5}
- .grid .g1 h2{font-size:46px}
- .grid .r2{grid-template-columns:repeat(3,minmax(0,1fr))}
- .grid .r2 .tile{aspect-ratio:2/3}
- .grid .r3{grid-template-columns:repeat(2,minmax(0,1fr))}
- .grid .r3 .tile{aspect-ratio:4/5}
- .grid .r4{grid-template-columns:repeat(3,minmax(0,1fr))}
- .grid .r4 .tile{aspect-ratio:4/5}
- .cap{padding:22px 24px}
- .cap h3{font-size:28px}
- .grid .g1 h2{font-size:46px}
- .g7 h3,.g8 h3{font-size:32px}
- .visit{min-height:440px}
- .visit .shade{background:linear-gradient(to right,rgba(0,0,0,.75),rgba(0,0,0,.45) 55%,rgba(0,0,0,.15))}
- .visit .body{padding:44px}
- .visit .bottom{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:20px}
-}
-/* Instagram */
-.insta{display:none;margin-top:var(--gap);padding:22px 0 6px}
-.insta.ready{display:block}
-.ig-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 16px;padding:0 2px 14px}
-.ig-head h2{margin:0;font:300 clamp(28px,6vw,44px)/1.05 var(--serif);letter-spacing:-.015em}
-.ig-head a{font-size:15px;font-weight:400;text-decoration:underline;text-underline-offset:5px}
-.ig-wrap{position:relative;display:none}
-.insta.ready .ig-wrap{display:block}
-.ig-track{display:grid;grid-auto-flow:column;grid-auto-columns:46%;gap:var(--gap);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch}
-.ig-track::-webkit-scrollbar{display:none}
-.ig-item{aspect-ratio:9/16;scroll-snap-align:start;display:block}
-.ig-cap{position:absolute;left:0;right:0;bottom:0;padding:28px 12px 12px;font-size:13px;line-height:1.35;color:#fff;background:linear-gradient(to top,rgba(0,0,0,.7),rgba(0,0,0,0))}
-.ig-play{position:absolute;top:10px;right:10px;width:0;height:0;border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;filter:drop-shadow(0 1px 4px rgba(0,0,0,.5))}
-.ig-nav{display:none}
-@media (min-width:640px){.ig-track{grid-auto-columns:calc((100% - 2*var(--gap))/3)}}
-@media (min-width:960px){
- .ig-track{grid-auto-columns:calc((100% - 3*var(--gap))/4)}
- .ig-cap{font-size:14px;padding:36px 16px 16px}
- .ig-nav{display:flex;align-items:center;justify-content:center;position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;border:0;border-radius:50%;background:rgba(251,250,247,.92);color:#141210;cursor:pointer;font-size:20px;box-shadow:0 2px 12px rgba(0,0,0,.18)}
- .ig-nav[data-dir="prev"]{left:12px}.ig-nav[data-dir="next"]{right:12px}
-}
-.insta{grid-column:1/-1;min-width:0}
-@media (max-width:959px){.grid>*,.grid .row>*,.grid .stack>*{order:2}.grid #sarees{order:0}.grid .insta{order:1}}
-@media (hover:hover){.insta .tile img,.insta .tile:hover img{filter:none}}
-</style>
+<link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
 <div class="wrap">
@@ -188,7 +38,7 @@ footer a{text-decoration:none}
   </div>
  </div>
  <nav class="cats" aria-label="Collections">
-  <a href="#sarees">sarees</a>
+  <a href="/saree-shop-marathahalli/">sarees</a>
   <a href="#salwar">salwar suits</a>
   <a href="#kurtis">kurtis &amp; women's wear</a>
   <a href="#dupattas">dupattas</a>
@@ -226,7 +76,7 @@ footer a{text-decoration:none}
   <div class="row r1">
   <article class="tile wide g1" id="sarees">
    <img src="img/sarees-640.webp" srcset="img/sarees-640.webp 640w, img/sarees-1100.webp 1100w" sizes="(min-width:960px) 45vw, 100vw" width="1100" height="1650" loading="lazy" decoding="async" alt="Woman in a purple and gold silk saree" style="object-position:50% 20%">
-   <div class="cap"><span class="num">01</span><h2>Sarees</h2><p>Kanjeevaram, Banarasi, Paithani, Patola, Mysore silk, Gadwal, Ikat, Chanderi, Tussar and more.</p></div>
+   <div class="cap"><span class="num">01</span><h2>Sarees</h2><p>Kanjeevaram, Banarasi, Paithani, Patola, Mysore silk, Gadwal, Ikat, Chanderi, Tussar and more.</p><a class="go" href="/saree-shop-marathahalli/">See all 41 weaves →</a></div>
   </article>
   <div class="stack">
   <article class="tile g2" id="salwar">
