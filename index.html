@@ -13,15 +13,15 @@
 <meta property="og:title" content="Farico — Complete Clothing Store in Marathahalli">
 <meta property="og:description" content="Sarees, salwars, kurtis, kidswear, men's wear, suitings, fabrics and home linen. Since 1962. Opp. MGA Hospital, Marathahalli Main Road, Bengaluru.">
 <meta property="og:url" content="https://farico.in/">
-<meta property="og:image" content="https://farico.in/img/hero-1600.webp">
+<meta property="og:image" content="https://farico.in/img/family-683.webp">
 <link rel="icon" type="image/png" href="img/icon-180.png">
 <link rel="apple-touch-icon" href="img/icon-180.png">
-<link rel="preload" as="image" href="img/hero-960.webp" imagesrcset="img/hero-960.webp 960w, img/hero-1600.webp 1600w, img/hero-2400.webp 2400w" imagesizes="(min-width:960px) 80vw, 100vw" fetchpriority="high">
+<link rel="preload" as="image" href="img/family-683.webp" imagesrcset="img/family-480.webp 480w, img/family-683.webp 683w" imagesizes="(min-width:960px) 520px, 100vw" fetchpriority="high">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;1,6..72,300&amp;family=Geist:wght@300;400&amp;display=swap">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ClothingStore","name":"Farico","url":"https://farico.in/","image":"https://farico.in/img/hero-1600.webp","logo":"https://farico.in/img/logo.png","foundingDate":"1962","telephone":"+91-80-41262785","address":{"@type":"PostalAddress","streetAddress":"Opp. MGA Hospital, Marathahalli Main Road","addressLocality":"Marathahalli, Bengaluru","addressRegion":"Karnataka","postalCode":"560037","addressCountry":"IN"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"21:00"}],"hasMap":"https://www.google.com/maps/search/?api=1&query=Farico%2C+Opp+MGA+Hospital%2C+Marathahalli+Main+Road%2C+Bangalore+560037"}
+{"@context":"https://schema.org","@type":"ClothingStore","name":"Farico","url":"https://farico.in/","image":"https://farico.in/img/family-683.webp","logo":"https://farico.in/img/logo.png","foundingDate":"1962","telephone":"+91-80-41262785","address":{"@type":"PostalAddress","streetAddress":"Opp. MGA Hospital, Marathahalli Main Road","addressLocality":"Marathahalli, Bengaluru","addressRegion":"Karnataka","postalCode":"560037","addressCountry":"IN"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"10:00","closes":"21:00"}],"hasMap":"https://www.google.com/maps/search/?api=1&query=Farico%2C+Opp+MGA+Hospital%2C+Marathahalli+Main+Road%2C+Bangalore+560037"}
 </script>
 <style>
 :root{--ink:rgba(20,18,16,.84);--bg:#FBFAF7;--gap:10px;--serif:'Newsreader',Georgia,'Times New Roman',serif;--sans:'Geist','Helvetica Neue',Arial,sans-serif}
@@ -60,11 +60,11 @@ img{display:block;max-width:100%}
 @media (prefers-reduced-motion:reduce){.tile img{transition:none}}
 
 /* Hero */
-.hero{height:min(78svh,640px);min-height:520px}
-.hero img{object-position:50% 30%}
-.hero .shade{position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.25) 50%,rgba(0,0,0,.1) 75%,rgba(0,0,0,.35) 100%)}
+.hero{display:flex;flex-direction:column;background:#141210}
+.hero img{position:relative;inset:auto;width:100%;height:auto;aspect-ratio:683/1024}
+.hero .shade{display:none;position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.25) 50%,rgba(0,0,0,.1) 75%,rgba(0,0,0,.35) 100%)}
 .hero .top{position:absolute;top:16px;left:16px;right:16px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.18em;text-transform:uppercase}
-.hero .body{position:absolute;left:0;right:0;bottom:0;padding:20px 16px;display:flex;flex-direction:column;gap:14px;text-shadow:0 1px 16px rgba(0,0,0,.3)}
+.hero .body{position:relative;padding:22px 16px 26px;display:flex;flex-direction:column;gap:14px;text-shadow:0 1px 16px rgba(0,0,0,.3)}
 .hero h1{margin:0;font:300 clamp(38px,10vw,88px)/.98 var(--serif);letter-spacing:-.025em}
 .hero p{margin:0;font-size:15px;line-height:1.55;max-width:560px}
 .hero .btn{align-self:flex-start;color:#fff;border-color:#fff;background:rgba(0,0,0,.2);text-shadow:none}
@@ -110,10 +110,14 @@ footer a{text-decoration:none}
  .store{display:flex;flex-direction:column;gap:10px;font-size:15px}
  .store a{text-decoration:none}
  main{flex:1;min-width:0}
- .hero{height:820px}
+ .hero{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:minmax(0,1fr);height:clamp(560px,calc(100svh - 48px),760px);aspect-ratio:auto;max-height:none;background:#141210}
+ .hero img{position:relative;inset:auto;grid-column:2;grid-row:1;height:100%;min-height:0;max-height:100%;width:auto;aspect-ratio:683/1024}
+ .hero .shade{display:none}
+ .hero .body{position:relative;grid-column:1;grid-row:1;align-self:end;flex-direction:column;align-items:flex-start;justify-content:flex-end}
+ .hero h1{font-size:clamp(42px,4.2vw,66px)}
  .hero .top{top:26px;left:44px;right:44px}
- .hero .body{padding:44px;flex-direction:row;flex-wrap:wrap;align-items:flex-end;justify-content:space-between}
- .hero .body>div{flex:1 1 520px;display:flex;flex-direction:column;gap:18px;max-width:780px}
+ .hero .body{padding:40px 44px;gap:24px}
+ .hero .body>div{display:flex;flex-direction:column;gap:18px;max-width:640px}
  .hero p{font-size:17px}
  .hero .btn{align-self:auto;min-height:52px;padding:0 26px}
  .grid{grid-template-columns:repeat(12,minmax(0,1fr));grid-auto-rows:10px}
@@ -174,7 +178,7 @@ footer a{text-decoration:none}
 
 <main>
  <section class="tile hero" aria-labelledby="h1">
-  <img src="img/hero-960.webp" srcset="img/hero-960.webp 960w, img/hero-1600.webp 1600w, img/hero-2400.webp 2400w" sizes="(min-width:960px) 80vw, 100vw" width="2400" height="1600" alt="A bride and groom in traditional Indian wedding attire" fetchpriority="high" decoding="async">
+  <img src="img/family-683.webp" srcset="img/family-480.webp 480w, img/family-683.webp 683w" sizes="(min-width:960px) 520px, 100vw" width="683" height="1024" alt="Three generations of a family dressed in silk sarees, kurtas and festive kidswear" fetchpriority="high" decoding="async">
   <div class="shade"></div>
   <div class="top"><span>Since 1962</span><span>Marathahalli · Bengaluru</span></div>
   <div class="body">
