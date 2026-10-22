@@ -65,7 +65,8 @@ img{display:block;max-width:100%}
 .hero .shade{display:none;position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,.75) 0%,rgba(0,0,0,.25) 50%,rgba(0,0,0,.1) 75%,rgba(0,0,0,.35) 100%)}
 .hero .top{position:absolute;top:16px;left:16px;right:16px;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.18em;text-transform:uppercase}
 .hero .body{position:relative;padding:22px 16px 26px;display:flex;flex-direction:column;gap:14px;text-shadow:0 1px 16px rgba(0,0,0,.3)}
-.hero h1{margin:0;font:300 clamp(38px,10vw,88px)/.98 var(--serif);letter-spacing:-.025em}
+.hero h1.kicker{margin:0;font:400 11px/1.4 var(--sans);letter-spacing:.18em;text-transform:uppercase;opacity:.9}
+.hero .lead{margin:0;font:300 clamp(38px,10vw,88px)/.98 var(--serif);letter-spacing:-.025em;max-width:none}
 .hero p{margin:0;font-size:15px;line-height:1.55;max-width:560px}
 .hero .btn{align-self:flex-start;color:#fff;border-color:#fff;background:rgba(0,0,0,.2);text-shadow:none}
 
@@ -114,7 +115,7 @@ footer a{text-decoration:none}
  .hero img{position:relative;inset:auto;grid-column:2;grid-row:1;height:100%;min-height:0;max-height:100%;width:auto;aspect-ratio:683/1024}
  .hero .shade{display:none}
  .hero .body{position:relative;grid-column:1;grid-row:1;align-self:end;flex-direction:column;align-items:flex-start;justify-content:flex-end}
- .hero h1{font-size:clamp(42px,4.2vw,66px)}
+ .hero .lead{font-size:clamp(42px,4.2vw,66px)}
  .hero .top{top:26px;left:44px;right:44px}
  .hero .body{padding:40px 44px;gap:24px}
  .hero .body>div{display:flex;flex-direction:column;gap:18px;max-width:640px}
@@ -183,8 +184,9 @@ footer a{text-decoration:none}
   <div class="top"><span>Since 1962</span><span>Marathahalli · Bengaluru</span></div>
   <div class="body">
    <div>
-    <h1 id="h1">Complete Clothing Store in <em>Marathahalli</em></h1>
-    <p>Sarees, salwars, kurtis, kidswear, men's wear, suitings, fabrics and home linen. See, touch and compare every piece in-store, the whole family under one roof.</p>
+    <h1 id="h1" class="kicker">Complete Clothing Store in Marathahalli</h1>
+    <p class="lead">Every wedding.<br>Every festival.<br><em>Every day.</em></p>
+    <p>Marathahalli's family clothing store since 1962. See, touch and choose in-store.</p>
    </div>
    <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Farico%2C+Opp+MGA+Hospital%2C+Marathahalli+Main+Road%2C+Bangalore+560037" target="_blank" rel="noopener">Visit our store in Marathahalli →</a>
   </div>
