@@ -13,19 +13,22 @@
 .shero p{margin:0;font-size:15px;line-height:1.55;max-width:520px}
 .shero .btn{align-self:flex-start;color:#fff;border-color:#fff;background:rgba(0,0,0,.2);text-shadow:none}
 
-/* Occasions */
-.occ{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:14px 0 4px;margin:0 -12px;padding-left:12px;padding-right:12px}
+/* Jump links */
+.occ{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding:14px 12px 4px;margin:0 -12px;position:sticky;top:96px;z-index:3;background:var(--bg)}
 .occ::-webkit-scrollbar{display:none}
-.occ span{flex:none;border:1px solid rgba(20,18,16,.3);padding:8px 14px;font-size:13px;letter-spacing:.02em;white-space:nowrap}
+.occ a{flex:none;border:1px solid rgba(20,18,16,.3);padding:9px 14px;font-size:13px;letter-spacing:.02em;white-space:nowrap;text-decoration:none}
+.occ a:hover{background:#141210;color:#fff;border-color:#141210}
 
-/* Variety tiles */
-.vgrid{display:grid;grid-template-columns:1fr;gap:var(--gap);margin-top:var(--gap)}
-.vt{aspect-ratio:1/1}
+/* Groups and weave tiles */
+.vgroup{padding-top:30px;scroll-margin-top:150px}
+.vgroup h2{margin:0 0 14px;font:300 clamp(26px,6vw,40px)/1.05 var(--serif);letter-spacing:-.015em;display:flex;align-items:baseline;gap:10px}
+.vgroup h2 span{font:400 12px var(--sans);letter-spacing:.14em;opacity:.7}
+.vgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--gap)}
+.vt{aspect-ratio:3/4;scroll-margin-top:150px}
 .vt .ph{position:absolute;inset:0}
-.vt .cap{padding:16px}
-.vt .cap h2{font:300 26px/1.05 var(--serif);margin:0}
-.vlist{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:2px 0;font-size:13px;line-height:1.5}
-.vlist li:not(:last-child)::after{content:"·";margin:0 7px;opacity:.7}
+.vt .cap{padding:12px}
+.vt .cap h3{font:300 20px/1.08 var(--serif);margin:0}
+.vt .cap p{font-size:12px;line-height:1.4;margin:3px 0 0}
 
 /* A to Z */
 .az,.why,.faq{padding:40px 2px 8px}
@@ -52,8 +55,7 @@
 .faq+.visit{margin-top:32px}
 
 @media (min-width:640px){
- .vgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
- .vt{aspect-ratio:3/4}
+ .vgrid{grid-template-columns:repeat(3,minmax(0,1fr))}
  .az ul{columns:3}
  .why ol{grid-template-columns:repeat(2,minmax(0,1fr))}
  .shero .body{padding:32px}
@@ -64,10 +66,12 @@
  .shero .body{top:0;right:auto;width:min(55%,620px);padding:44px;justify-content:flex-end;gap:18px}
  .shero .lead{font-size:clamp(52px,5vw,84px)}
  .shero p{font-size:17px}
- .occ{margin:0;padding:16px 0 4px;flex-wrap:wrap}
+ .occ{margin:0;padding:16px 0 10px;flex-wrap:wrap;top:0}
+ .vgroup,.vt{scroll-margin-top:90px}
  .vgrid{grid-template-columns:repeat(4,minmax(0,1fr))}
- .vt .cap{padding:20px}
- .vt .cap h2{font-size:28px}
+ .vt .cap{padding:18px}
+ .vt .cap h3{font-size:24px}
+ .vt .cap p{font-size:13px}
  .az ul{columns:4}
  .why ol{grid-template-columns:repeat(4,minmax(0,1fr))}
 }
