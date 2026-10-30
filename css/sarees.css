@@ -75,3 +75,4 @@
  .az ul{columns:4}
  .why ol{grid-template-columns:repeat(4,minmax(0,1fr))}
 }
+.repnote{font-size:13px;line-height:1.5;margin:14px 2px 0;opacity:.8;max-width:640px}
